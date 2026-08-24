@@ -3,14 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Sports Corner</title>
     <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
     <section id="outer-grid-container">
         <header id="header">
-            <h2>Header</h2>
-            <p><span>Sports</span><span>Corner</span></p>
+            <!-- <h2>Header</h2> -->
+            <div id="upper-header-part">
+                <p class="logo"><a href="index.html"><span>Sports</span><span>Corner</span></a></p>
+                <form id="search-form" action="search.html" method="get">
+                    <input type="text" name="search" placeholder="Search">
+                    <button type="submit" name="submit"><i class="fa fa-search" style="color: white;"></i></button>
+                </form>
+                <nav id="upper-header-navbar">
+                    <ul id="basic-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="news.html">All News</a></li>
+                        <li><a href="radio-sessions.html">Radio Sessions</a></li>
+                    <!-- </ul> -->
+                    <ul id="authentication-links">
+                        <li><a href="register.html">Register</a></li>
+                        <li><a href="sign-in.html">Sign In</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+            <!-- <div id="lower-header-part"> -->
+                <nav id="lower-header-navbar">
+                    <ul id="category-links">
+                        <li><a href="Football-news.html">Football</a></li>
+                        <li><a href="basketball-news.html">Basketball</a></li>
+                        <li><a href="boxing-news.html">Boxing</a></li>
+                        <li><a href="tennis-news.html">Tennis</a></li>
+                        <li><a href="golf-news.html">Golf</a></li>
+                    </ul>
+                </nav>
+            <!-- </div> -->
+            
         </header>
         <section id="results">
             <h2>Results</h2>
