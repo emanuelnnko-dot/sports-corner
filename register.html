@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Create Your Account.</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <section class="form-container">
+        <header class="form-header">
+            <p class="logo"><a href="index.html"><span>Sports</span><span>Corner</span></a></p>
+            <nav>
+                <ul>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Privacy</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="form-main">
+            <div class="form-main-content">
+                <h1>Create your account</h1>
+                <p>Access other features in the website like commenting, like and share news to others. All fields are required</p>
+                <form action="register.html" method="post">
+                    <label for="email">Existing email</label> <br>
+                    <input type="email" id="email" name="email" title="Please fill out this field." required> <br>
+                    
+                    <label for="f-name">Fist name</label> <br>
+                    <input type="text" id="f-name" name="f-name" title="Please fill out this field." required> <br>
+
+                    <label for="l-name">Last name</label> <br>
+                    <input type="text" id="l-name" name="l-name" title="Please fill out this field." required> <br>
+
+                    <label for="year">Birth year (YYYY)</label> <br>
+                    <input type="text" id="year" name="year" title="Please fill out this field." required> <br>
+
+                    <p>By creating an account, you agree to our <a href="#">Terms</a> and <a href="#">Privacy Policy</a>.</p>
+
+                    <button type="submit" id="submit" name="submit">Next</button>
+                </form>
+                <div class="separating-lines">
+                    <hr><p> or </p><hr>
+                </div>
+                <a href="login.html"><button>Sign in instead</button></a>
+            </div>
+        </main>
+
+    </section>
+</body>
+</html>

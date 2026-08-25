@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Sign in to Your Account.</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <section class="form-container">
+        <header class="form-header">
+            <p class="logo"><a href="index.html"><span>Sports</span><span>Corner</span></a></p>
+            <nav>
+                <ul>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Privacy</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="form-main">
+            <div class="form-main-content">
+                <h1>Sign in to Your Account</h1>
+                <form action="login.html" method="post">
+                    <label for="text">Username, email or phone number</label> <br>
+                    <input type="text" id="text" name="u-name" title="Please fill out this field." required> <br>
+                    <div class="login-form-middle-part">
+                        <div>
+                            <input type="checkbox" id="stay-signed" name="stay-signed" value="true" checked>                    
+                            <label for="stay-signed">Stay signed in</label>
+                        </div>
+                        <p><a href="#">Forgot username</a></p>
+                    </div>
+                    <button type="submit" id="submit" name="submit">Next</button>
+                </form>
+                <div class="separating-lines">
+                    <hr><p> or </p><hr>
+                </div>
+                <a href="google.com"><button class="google-button">Sing in with Google</button></a>
+                <a href="register.html"><button>Create account</button></a>
+            </div>
+        </main>
+
+    </section>
+</body>
+</html>
