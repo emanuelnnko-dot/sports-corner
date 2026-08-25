@@ -265,4 +265,23 @@ header a:hover {
     padding-left: 30px;
 }
 
+#footer {
+    grid-area: footer;
+    background-color: #edf7fc;
+    padding: 15px 0;
+    border-top: 1px solid rgba(211, 213, 215, 0.929);
+}
 
+#footer > section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-bottom: 10px;
+    border-bottom: 2px solid white;
+}
+
+footer > p {
+    text-align: center;
+    border-top: 1px solid rgba(211, 213, 215, 0.929);
+    padding-top: 10px;
+}
