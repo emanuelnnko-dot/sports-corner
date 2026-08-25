@@ -31,7 +31,7 @@ html {
                          "results results results"
                          "left-sidebar main right-sidebar"
                          "footer footer footer";
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: 28% 44% 28%;
     
 }
 
@@ -177,19 +177,92 @@ header a:hover {
     grid-area: left-sidebar;
     background-color: #edf7fc;
     padding-left: 5.5rem;
+    border-bottom: 2px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #main {
- grid-area: main;
- background-color: #edf7fc;
+    grid-area: main;
+    background-color: #edf7fc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid white;
+ /* border: 1px solid blue; */
+}
+
+.news-collection {
+    /* width: 100%; */
+    background-color: white;
+    border: 1px solid rgba(211, 213, 215, 0.929);
+    border-radius: 13px;
+    
+}
+
+.news-collection .heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(211, 213, 215, 0.929);
+    padding: 5px 15px;
+}
+
+.news-collection h2 {
+    font-size: 20px;
+}
+
+.news-collection h3 {
+    
+    font-size: 22px;
+}
+
+.news-collection-big-news {
+    width: 100%;
+    padding: 15px;
+    /* object-fit: cover; */
+}
+
+.news-collection-big-news img {
+    width: 100%;
+}
+
+.news-collection-small-news {
+    display: flex;
+    align-items: flex-start;
+    /* justify-content: flex-start; */
+    gap: 10px;
+    padding: 0 15px 15px 15px;
+}
+
+.news-collection-small-news .cards {
+    flex: 1;
+    /* padding: 10px;; */
+}
+
+.news-collection-small-news .cards img {
+    width: 100%;
+}
+
+.news-collection h4 {
+    font-size: 14px;
 }
 
 #right-sidebar {
     grid-area: right-sidebar;
     background-color: #edf7fc;
     padding-right: 5.5rem;
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid white;
 }
 
-#footer {
-    grid-area: footer;
+#right-sidebar img {
+    /* width: 300px; */
+    width: 100%;
+    padding-left: 30px;
 }
+
+
