@@ -575,3 +575,106 @@ textarea:focus {
 }
 
 /* END of: Style for forms used in Register account, Log in and Contact us ****************** */
+
+/* Start of style for about.html page ************************** */
+
+#main-section-about-us {
+    background-color: #edf7fc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid white;
+    /* border: 1px solid blue; */
+}
+
+#about-us {
+    width: 60%;
+    background-color: white;
+    border: 1px solid rgba(211, 213, 215, 0.929);
+    border-radius: 13px;
+    padding: 15px;
+}
+
+#about-us a {
+    color: blue;
+}
+
+#about-us .heading {
+    border-bottom: 1px solid rgba(211, 213, 215, 0.929);
+    padding: 5px 0px;
+}
+
+
+#about-us h2 {
+    font-size: 20px;
+}
+
+#about-us h3 {
+    font-size: 22px;
+}
+
+#about-us-big-image {
+    width: 100%;
+    padding: 15px 0px;
+}
+
+#about-us-big-image img {
+    width: 100%;
+}
+
+#about-us-words-grid {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+#about-us-words-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#about-us-words-card {
+    padding: 15px;
+    background-color: rgba(211, 215, 215, 0.185);
+    border: 1px solid rgba(211, 213, 215, 0.929);
+    border-radius: 10px;
+    box-shadow: 0px 5px 8px rgba(211, 213, 215, 0.929);
+    text-align: justify;
+}
+
+#about-us-words-card h3 {
+    font-size: 20px;
+    border-bottom: 1px solid rgba(211, 213, 215, 0.929);
+    /* padding: 5px 0px; */
+    margin-bottom: 5px;
+}
+
+
+
+#about-us-team-members {
+    display: flex;
+    align-items: flex-start;
+    /* justify-content: flex-start; */
+    gap: 10px;
+    padding: 10px 0px;
+}
+
+#about-us-team-members .cards {
+    flex: 1;
+    padding: 10px 0px;
+}
+
+#about-us-team-members .cards img {
+    width: 100%;
+}
+
+#about-us h4 {
+    font-size: 14px;
+}
+
+
+
+/* END of Start of style for about.html page ************************** */
