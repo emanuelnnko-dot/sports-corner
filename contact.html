@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Give Out Your Opinion.</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <section class="form-container">
+        <header class="form-header">
+            <p class="logo"><a href="index.html"><span>Sports</span><span>Corner</span></a></p>
+            <nav>
+                <ul>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Privacy</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="form-main">
+            <div class="form-main-content form-main-content-contact-us">
+                <h1>Contact us</h1>
+                <p>Give us feedback and your opinion about what we do.</p>
+                <form action="contact.html" method="post">
+                    
+                    <label for="f-name">Fist name</label> <br>
+                    <input type="text" id="f-name" name="f-name" > <br>
+
+                    <label for="l-name">Last name</label> <br>
+                    <input type="text" id="l-name" name="l-name" > <br>
+
+                    <section>
+                        <p>Gender:</p>
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label>
+
+                        <p>What's your prefered sports:</p>
+                        <input type="checkbox" id="supplies" name="spoats" value="footbal"> 
+                        <label for="supplies">Footbal</label> 
+                        <input type="checkbox" id="irrigation" name="spoats" value="basketball"> 
+                        <label for="irrigation">Basketball</label> 
+                        <input type="checkbox" id="consultation" name="spoats" value="boxing"> 
+                        <label for="consultation">Boxing</label>  
+                        <input type="checkbox" id="marketing" name="spoats" value="others"> 
+                        <label for="marketing">Others</label> <br>
+                    </section>
+                    
+                    <label for="phone">Tel:</label>
+                    <input type="tel" id="phone" name="phone">
+                    <br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email">
+
+                    <label for="year">Birth year (YYYY)</label> <br>
+                    <input type="text" id="year" name="year"> <br>
+
+                    <label for="more-info">Please give us more information</label> 
+                    <br>
+                    <textarea id="more-info" name="explanation" placeholder="Give us more information" required>
+                    </textarea>
+                    <br><br> 
+
+                    <button type="submit" id="submit" name="submit">Submit</button>
+                </form>
+                
+            </div>
+        </main>
+
+    </section>
+</body>
+</html>
