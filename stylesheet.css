@@ -348,6 +348,10 @@ header a:hover {
     font-size: 14px;
 }
 
+.news-collection a:hover {
+    text-decoration: underline;
+}
+
 #right-sidebar {
     grid-area: right-sidebar;
     background-color: #edf7fc;
@@ -589,7 +593,7 @@ textarea:focus {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 10px;
+    padding: 15px 0px;
     border-bottom: 2px solid white;
     /* border: 1px solid blue; */
 }
@@ -749,6 +753,10 @@ textarea:focus {
     margin-top: 6px;
 }
 
+#main-section-all-news a:hover {
+    text-decoration: underline;
+}
+
 #main-section-all-news .news-text p:nth-child(2) {
     /* border-bottom: 1px solid #bed4df; */
 }
@@ -773,3 +781,63 @@ textarea:focus {
 
 
 /* END of style for all-news.html ****************************************** */
+
+
+.main-section-single-news {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+#main-section-single-news .news-item {
+    display: grid;
+    /* grid-template-columns: 1fr 3fr; */
+    width: 90%;
+    background-color: #edf7fc;
+    padding: 5px;
+    min-height: 70px;
+    box-shadow: 0px 5px 8px rgba(128, 128, 128, 0.388);
+    margin: 15px;
+}
+
+#main-section-single-news .news-item img {
+    width: 100%;
+}
+
+
+#main-section-single-news .news-text {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 5px 5px 15px;
+}
+
+#main-section-single-news .news-text h3 {
+    border-bottom: 1px solid #bed4df;
+    /* margin-bottom: 5px; */
+}
+
+#main-section-single-news img {
+    margin-top: 6px;
+}
+
+#main-section-single-news .news-text p:nth-child(2) {
+    /* border-bottom: 1px solid #bed4df; */
+}
+
+#main-section-single-news .news-text p > span:first-child {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+#main-section-single-news .news-text p > span:nth-child(2) {
+    font-size: 13px;
+}
+
+#main-section-single-news .news-text p > span:nth-child(3) {
+    font-size: 13px;
+}
+
+#main-section-single-news .news-text p > span {
+    margin-right: 3px; 
+}
