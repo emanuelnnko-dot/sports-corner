@@ -60,9 +60,9 @@ function filterNewsByCategory(newsList, newsCategory) {
 function createNewsItem(newsObject) {
     let newsItem = `
     <article class="news-item">
-        <img src=${newsObject.imageUrl} alt=${newsObject.imageAlt}>
+        <img src="${newsObject.imageUrl}" alt="${newsObject.imageAlt}">
         <div class="news-text">
-            <h3><a href=${newsObject.titleLink}>${newsObject.title}</a></h3>
+            <h3><a href="news-story.html?id=${newsObject.id}">${newsObject.title}</a></h3>
             <p><span>${newsObject.category}:</span><span>${newsObject.location}.</span><span> ${newsObject.date}</span></p>
             <p>
                 ${newsObject.newsIntro}

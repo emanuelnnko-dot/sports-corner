@@ -10,8 +10,6 @@ const API_URL = "http://localhost:5000/api/news";
     const newsId = urlParams.get("id");
     console.log(newsId);
 
-
-
     async function fetchSingleNews() {
     try{
         const response = await fetch(`${API_URL}/${newsId}`);
@@ -22,31 +20,10 @@ const API_URL = "http://localhost:5000/api/news";
         } else {
             console.log(result);
             const pageTitle = document.querySelector("title");
-            pageTitle.textContent = result[0].title;
-
-            // let filteredNews;
-            // switch(newsCategory) {
-            //     case "all-news":
-            //         mainSectionSingleNews
-            //         filteredNews = result;
-                    
-            //         break;
-            //     case "football":
-            //         pageTitle.textContent = "Football News";
-            //         console.log(newsCategory);
-            //         filteredNews = filterNewsByCategory(result, "football");
-            //         break;
-            //     case "basketball":
-            //         pageTitle.textContent = "Basketball News";
-            //         console.log(newsCategory);
-            //         filteredNews = filterNewsByCategory(result, "basketball");
-            //         break;
-            //     // default:
-            //     //     filteredNews = result;                
-            // }
-
-            renderNewsList(mainSectionSingleNews, result);
-            // displaySingleNews(mainSectionSingleNews, result);
+            console.log(result);
+            console.log(result.title);
+            pageTitle.textContent = result.title;
+            displaySingleNews(mainSectionSingleNews, result);
         }
     }
     catch (error) {
@@ -54,3 +31,62 @@ const API_URL = "http://localhost:5000/api/news";
     }
 }
 fetchSingleNews();
+
+{/* <img src=${newsObject.imageUrl} alt=${newsObject.imageAlt}>
+        <div class="news-text">
+            <h3><a href=${newsObject.titleLink}>${newsObject.title}</a></h3>
+            <p><span>${newsObject.category}:</span><span>${newsObject.location}.</span><span> ${newsObject.date}</span></p>
+            <p>
+                ${newsObject.newsIntro}
+            </p> */}
+
+function displaySingleNews(newsContainer, result) {
+    mainSectionSingleNews.innerHTML = "";
+    const newsElement = `
+    <article class="news-item">
+    <img src="${result.imageUrl}" alt="${result.imageAlt}">
+    <div class="news-text">
+        <h3>${result.title}</h3>
+        <p><span>${result.category}:</span><span>${result.location}.</span><span> ${result.date}</span></p>
+        <p>
+            ${result.newsStory}
+        </p>
+    </div>
+    </article> `;
+    mainSectionSingleNews.innerHTML = newsElement;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// function createNewsItem(newsObject) {
+//     let newsItem = `
+//     <article class="news-item">
+//         <img src=${newsObject.imageUrl} alt=${newsObject.imageAlt}>
+//         <div class="news-text">
+//             <h3><a href=${newsObject.titleLink}>${newsObject.title}</a></h3>
+//             <p><span>${newsObject.category}:</span><span>${newsObject.location}.</span><span> ${newsObject.date}</span></p>
+//             <p>
+//                 ${newsObject.newsIntro}
+//             </p>
+//         </div>
+//     </article> `;
+//     return newsItem;
+// }
+
+// function renderNewsList(newsContainer, newsArray) {
+//     newsContainer.innerHTML = "";
+//     let newsList = newsArray.map(newsObject => {
+//         return createNewsItem(newsObject);
+//     });
+//     newsContainer.innerHTML = newsList.join("");
+// }
+

@@ -23,8 +23,40 @@ const news = [
         location: "London, UK",
         imageUrl: "images/football/gabriel-martineli.png",
         imageAlt: "Gabriel Martineli",
-        newsIntro: "Mikel Arteta is set to facilitate a record-breaking departure as the Brazilian winger nears a blockbuster move to Al Hilal, ending a seven-year spell in North London.",
-        newsStory: "Mikel Arteta is set to facilitate a record-breaking departure as the Brazilian winger nears a blockbuster move to Al Hilal, ending a seven-year spell in North London"
+        newsIntro: "Mikel Arteta is set to facilitate a record-breaking departure as the Brazilian winger nears a blockbuster move to Al Hilal, ending a seven-year spell in North .",
+        newsStory: `Mikel Arteta is set to facilitate a record-breaking departure as the Brazilian winger nears blockbuster move to Al Hilal, ending a seven-year spell in North London. 
+        Arsenal are in final stage talks with Saudi Arabian club Al Hilal over the permanent transfer of Gabriel Martinelli for a fee between £50m - £55m as per Fabrizio Romano.
+
+        According to several reports, Mikel Arteta has held meetings with the Brazilian over his role
+        this season and the outcome of those meetings is now pointing towards an exit for the 25
+        year-old following the signing of Chris Tzolis from Club Brugge earlier this summer. <br> <br>
+
+        Martinelli is set to leave North London having scored 62 goals and provided 36 assists in 317
+        appearances in his 7 years at the club. The left-winger signed for the club under Unai Emery in
+        2019 from then Brazilian 3rd division side Ituano for a fee of £8m and made his competitive
+        debut for the first team against Newcastle, having initially been signed to play for the U21s
+        side. <br> <br>
+
+        'Gabi' is set to leave N7 with a plethora of crucial goals for Arsenal over his career,
+        including *THAT* solo run and goal in a 2-2 draw vs Chelsea when the side were down to 10 men,
+        the late winning goal against Manchester City at The Emirates Stadium and the goal to seal the
+        victory over Real Madrid at the Bernabeu in the Champions League to name a few. He is also set
+        to leave the club as a Premier League Champion, having also won the FA Cup and 2x Community
+        Shield trophies across his 7 years in England. <br> <br>
+
+        Once the deal goes through, Arsenal's attention must turn to a reinforcement out wide. Having
+        also lost Leandro Trossard to Besiktas this summer, many could argue that Arsenal have regressed
+        in their wing options, with only Tzolis coming in, in the attacking department so far. Despite
+        the Greek international's positive start to his Arsenal career, Mikel Arteta will no doubt want
+        cover in all areas as Arsenal look to 'attack' all four major trophies this season. <br> <br>
+
+
+        If the fee being spoken about does come to fruition, the sale of Gabriel Martinelli will mark
+        the club's record sale, which currently stands at Alex Oxlade-Chamberlain to Liverpool in 2017
+        for a fee just north of £35m. Whilst a deal between Arsenal and Al Hilal is not quite confirmed,
+        having been left out of the squad during Arsenal's 3-0 opening day victory over Coventry City,
+        all talk is now looking towards Gabriel Martinelli leaving the club for Saudi Arabia very
+        shortly. More updates will no doubt, follow shortly.`
     },
     {
         id: 2,
@@ -83,13 +115,13 @@ app.get("/api/news", (req, res) => {
 
 app.get("/api/news/:id", (req, res) => {
     const newsId = parseInt(req.params.id);
-    const news = news.find(news => news.id === newsId);
-    if(!news) {
+    const selectedNews = news.find(n => n.id === newsId);
+    if(!selectedNews) {
         // status code: 404 - news was not found
         return res.status(404).json(`News is not available`);
     } else {
         // status code: 200 OK - response is successful 
-        res.status(200).json(news);
+        res.status(200).json(selectedNews);
         // console.log(`News is available:, news`);
     }
 });
