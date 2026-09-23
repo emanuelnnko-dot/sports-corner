@@ -189,6 +189,28 @@ header a:hover {
     color: rgb(125 46 255);
 }
 
+#notification-message {
+    position: fixed;
+    top: 0px;
+    z-index: 1;
+    border: 1px solid #b3e6ff63;
+    width: 500px;
+    /* height: 100px; */
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: lab(88.64% -10.65 -17.41);
+    box-shadow: 0px 9px 7px #10263163;
+    display: none;
+}
+
+#notification-message h2 {
+    color: blue;
+}
+
+#notification-message p {
+    color: rgb(125 46 255);
+}
 
 #results {
     grid-area: results;
@@ -452,6 +474,14 @@ footer > p {
     text-align: center;
 }
 
+.form-main form .input-correction-message {
+    /* border: 1px solid blue; */
+    text-align: left;
+    color: red;
+    margin-top: -15px;
+    /* display: none; */
+}
+
 .form-main h1, .form-main p {
     /* text-align: justify; */
     margin: 10px 0px;
@@ -502,7 +532,7 @@ footer > p {
     background-color: rgba(179, 149, 227, 0.281);
 }
 
-.form-container input[type="text"], .form-container input[type="email"], .form-container input[type="tel"] {
+.form-container input[type="text"], .form-container input[type="email"], .form-container input[type="tel"], .form-container input[type="password"] {
     width: 100%;
     height: 50px;
     margin-bottom: 15px;
@@ -532,6 +562,12 @@ footer > p {
     text-align: center;
 }
 
+#fail-login-message {
+    font-size: 15px;
+    color: red;
+    text-align: center;
+    display: none;
+}
 
 .login-form-middle-part {
     display: flex;

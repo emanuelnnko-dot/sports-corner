@@ -21,26 +21,31 @@
         <main class="form-main">
             <div class="form-main-content">
                 <h1>Sign in to Your Account</h1>
+                <h3 id="fail-login-message">Fail to log in, your login email or password are incorrect</h3>
                 <form action="login.html" method="post">
-                    <label for="text">Username, email or phone number</label> <br>
-                    <input type="text" id="text" name="u-name" title="Please fill out this field." required> <br>
+                    <label for="login-email">Email</label> <br>
+                    <input type="text" id="login-email" name="login-email" title="Please fill out this field." required> <br>
+                    <label for="login-password">Password</label> <br>
+                    <input type="password" id="login-password" name="login-password" title="Please fill out this field." required> <br>
                     <div class="login-form-middle-part">
                         <div>
-                            <input type="checkbox" id="stay-signed" name="stay-signed" value="true" checked>                    
+                            <input type="checkbox" id="stay-signed" name="stay-signed" value="true" >                    
                             <label for="stay-signed">Stay signed in</label>
                         </div>
                         <p><a href="#">Forgot username</a></p>
                     </div>
-                    <button type="submit" id="submit" name="submit">Next</button>
+                    <button type="submit" id="login-btn" name="submit">Log in</button>
                 </form>
                 <div class="separating-lines">
                     <hr><p> or </p><hr>
                 </div>
                 <a href="google.com"><button class="google-button">Sing in with Google</button></a>
-                <a href="register.html"><button>Create account</button></a>
+                <!-- <a href="register.html"><button>Create account</button></a> -->
             </div>
         </main>
 
     </section>
+
+    <script src="authentication.js"></script>
 </body>
 </html>

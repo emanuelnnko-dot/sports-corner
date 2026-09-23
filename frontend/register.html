@@ -19,25 +19,41 @@
             </nav>
         </header>
         <main class="form-main">
+            <div id="notification-message">
+                <!-- <h2>You have successful created an account</h2>
+                <p>You will be redirected to log in page for log in process</p> -->
+            </div>
             <div class="form-main-content">
                 <h1>Create your account</h1>
-                <p>Access other features in the website like commenting, like and share news to others. All fields are required</p>
+                <p>(For Admin) Access other features in the website like post, edit and delete news. All fields are required</p>
                 <form action="register.html" method="post">
-                    <label for="email">Existing email</label> <br>
-                    <input type="email" id="email" name="email" title="Please fill out this field." required> <br>
+                    <label for="id-number">Your employee ID number</label> <br>
+                    <input type="text" id="id-number" name="id-number" title="Please fill out this field." required> <br>
+                    <p id="id-number-correction" class="input-correction-message"></p>
+
+                    <label for="register-email">Existing email</label> <br>
+                    <input type="email" id="register-email" name="register-email" title="Please fill out this field." required> <br>
+                    <p id="register-email-correction" class="input-correction-message"></p>
                     
                     <label for="f-name">Fist name</label> <br>
                     <input type="text" id="f-name" name="f-name" title="Please fill out this field." required> <br>
+                    <p id="f-name-correction" class="input-correction-message"></p>
 
                     <label for="l-name">Last name</label> <br>
                     <input type="text" id="l-name" name="l-name" title="Please fill out this field." required> <br>
+                    <p id="l-name-correction" class="input-correction-message"></p>
 
-                    <label for="year">Birth year (YYYY)</label> <br>
-                    <input type="text" id="year" name="year" title="Please fill out this field." required> <br>
+                    <label for="register-password">Password</label> <br>
+                    <input type="password" id="register-password" name="register-password" title="Please fill out this field." required> <br>
+                    <p id="register-password-correction" class="input-correction-message"></p>
+
+                    <label for="confirm-password">Confirm password</label> <br>
+                    <input type="password" id="confirm-password" name="confirm-password" title="Please fill out this field." required> <br>
+                    <p id="confirm-password-correction" class="input-correction-message"></p>
 
                     <p>By creating an account, you agree to our <a href="#">Terms</a> and <a href="#">Privacy Policy</a>.</p>
 
-                    <button type="submit" id="submit" name="submit">Next</button>
+                    <button type="submit" id="register-btn" name="register-btn">Create account</button>
                 </form>
                 <div class="separating-lines">
                     <hr><p> or </p><hr>
@@ -47,5 +63,7 @@
         </main>
 
     </section>
+
+    <script src="authentication.js"></script>
 </body>
 </html>

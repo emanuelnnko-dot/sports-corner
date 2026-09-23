@@ -127,6 +127,31 @@ app.get("/api/news/:id", (req, res) => {
 });
 
 
+const admin = [];
+app.post("/api/admin", (req, res) => {
+    const UUID = crypto.randomUUID();
+    const newAdmin = {
+        id: UUID,
+        employeeId: req.body.employeeId,
+        email: req.body.email,
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        password: req.body.password
+    }
+    let prevArrayLength = admin.length;
+    admin.push(newAdmin);
+    let newArrayLength = admin.length;
+
+    if (newArrayLength > prevArrayLength) {
+        res.status(201).json({
+        message: "You have created an account successfully",
+        data: newAdmin
+    });
+    } else {
+        res.status(500).json("Sorry, the account was not created");
+    }
+});
+
 
 app.listen(PORT, () => {
     console.log(`Server is running locally at http://localhost:${PORT}`); 
