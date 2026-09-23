@@ -19,3 +19,6 @@ async function fetchAllNews() {
 }
 
 fetchAllNews();
+
+let moreNewsInCategory = document.querySelector('#more');
+moreNewsInCategory.style.display = "none";

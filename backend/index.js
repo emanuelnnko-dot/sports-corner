@@ -24,7 +24,7 @@ const news = [
         imageUrl: "images/football/gabriel-martineli.png",
         imageAlt: "Gabriel Martineli",
         newsIntro: "Mikel Arteta is set to facilitate a record-breaking departure as the Brazilian winger nears a blockbuster move to Al Hilal, ending a seven-year spell in North London.",
-        newsStory: ""
+        newsStory: "Mikel Arteta is set to facilitate a record-breaking departure as the Brazilian winger nears a blockbuster move to Al Hilal, ending a seven-year spell in North London"
     },
     {
         id: 2,
@@ -79,10 +79,20 @@ const news = [
 
 app.get("/api/news", (req, res) => {
     res.status(200).json(news);
-    // console.log(products);
 });
 
-
+app.get("/api/news/:id", (req, res) => {
+    const newsId = parseInt(req.params.id);
+    const news = news.find(news => news.id === newsId);
+    if(!news) {
+        // status code: 404 - news was not found
+        return res.status(404).json(`News is not available`);
+    } else {
+        // status code: 200 OK - response is successful 
+        res.status(200).json(news);
+        // console.log(`News is available:, news`);
+    }
+});
 
 
 

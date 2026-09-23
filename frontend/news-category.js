@@ -2,14 +2,14 @@ const mainSectionAllNews = document.getElementById("main-section-all-news");
 
 const API_URL = "http://localhost:5000/api/news";
 
-let allNews = [];
+// let allNews = [];
 async function fetchAllNews() {
     try{
         const response = await fetch(`${API_URL}`);
         const result = await response.json();
         if (!response.ok) {
             // console.log(result);
-            throw new Error(result || "Failed to retrieve products");
+            throw new Error(result || "Failed to retrieve news");
         } else {
             console.log(result);
 
@@ -20,16 +20,23 @@ async function fetchAllNews() {
             console.log(urlParams);
             const newsCategory = urlParams.get("category");
             console.log(newsCategory);
+
+            const pageTitle = document.querySelector("title");
+
             let filteredNews;
             switch(newsCategory) {
                 case "all-news":
+                    pageTitle.textContent = "All News";
                     filteredNews = result;
+                    
                     break;
                 case "football":
+                    pageTitle.textContent = "Football News";
                     console.log(newsCategory);
                     filteredNews = filterNewsByCategory(result, "football");
                     break;
                 case "basketball":
+                    pageTitle.textContent = "Basketball News";
                     console.log(newsCategory);
                     filteredNews = filterNewsByCategory(result, "basketball");
                     break;
@@ -37,26 +44,18 @@ async function fetchAllNews() {
                 //     filteredNews = result;                
             }
             renderNewsList(mainSectionAllNews, filteredNews);
-
-
-
         }
     }
     catch (error) {
         console.error(`Error occured:`, error);
     }
 }
-
 fetchAllNews();
 
-// console.log(allNews);
-// const newsCategory = "football";
 function filterNewsByCategory(newsList, newsCategory) {
     return newsList.filter(news => news.category.toLowerCase() === newsCategory);
     
 }
-
-
 
 function createNewsItem(newsObject) {
     let newsItem = `
@@ -72,9 +71,6 @@ function createNewsItem(newsObject) {
     </article> `;
     return newsItem;
 }
-
-// mainSectionAllNews.innerHTML = createNewsItem(newsObject);
-// console.log(createNewsItem(newsObject));
 
 function renderNewsList(newsContainer, newsArray) {
     newsContainer.innerHTML = "";
