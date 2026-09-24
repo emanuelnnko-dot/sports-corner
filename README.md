@@ -37,10 +37,24 @@ To create the website that will include the features that will meet their needs.
 sports-corner
   images
     ads
+    basketball
     football
     team
+  news
+    basketball
+      basketball-news.html
+    boxing
+      boxing-news.html
+    football
+      football-news.html
+    golf
+      golf-news.html
+    others
+      other-sports-news.html
+    tennis
+      tennis-news.html
+    all-news.html
   about.html
-  all-news.html
   contact.html
   index.html
   login.html
