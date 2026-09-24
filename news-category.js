@@ -2,6 +2,28 @@ const mainSectionAllNews = document.getElementById("main-section-all-news");
 
 const API_URL = "http://localhost:5000/api/news";
 
+
+const queryString = window.location.search;
+console.log(queryString);
+const urlParams = new URLSearchParams(queryString);
+console.log(urlParams);
+const newsCategory = urlParams.get("category");
+console.log(newsCategory);
+
+if(newsCategory == "all-news") {
+    const allNews = document.getElementById("all-news");
+    console.log(allNews);
+    allNews.style.color = "rgb(125 46 255)";
+    allNews.style.fontSize = "14px";
+    allNews.style.fontWeight = "800";
+}
+
+// const linkHome = document.getElementById("link-home");
+// console.log(linkHome);
+// linkHome.style.color = "rgb(125 46 255)";
+// linkHome.style.fontSize = "14px";
+// linkHome.style.fontWeight = "800";
+
 // let allNews = [];
 async function fetchAllNews() {
     try{
@@ -28,6 +50,12 @@ async function fetchAllNews() {
                 case "all-news":
                     pageTitle.textContent = "All News";
                     filteredNews = result;
+
+                    const allNews = document.getElementById("all-news");
+                    console.log(allNews);
+                    allNews.style.color = "rgb(125 46 255)";
+                    allNews.style.fontSize = "14px";
+                    allNews.style.fontWeight = "800";
                     
                     break;
                 case "football":
@@ -80,45 +108,3 @@ function renderNewsList(newsContainer, newsArray) {
     newsContainer.innerHTML = newsList.join("");
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const newsObject = {
-//     id: 1,
-//     category: "Football",
-//     title: "Gabriel Martinelli Set for Saudi Switch As Pressure Mounts for Attacking Reinforcements",
-//     titleLink: "news-story.html?id=1",
-//     date: "25 Aug 2026",
-//     location: "London, UK",
-//     imageUrl: "images/football/gabriel-martineli.png",
-//     imageAlt: "Gabriel Martineli",
-//     newsIntro: "Mikel Arteta is set to facilitate a record-breaking departure as the Brazilian winger nears a blockbuster move to Al Hilal, ending a seven-year spell in North London.",
-//     newsStory: ""
-// }
-
-
-// mainSectionAllNews
-// function createNewsItem(newsObject) {
-//     let article = document.createElement("article");
-//     article.classList.add("news-item");
-    
-//     let image = document.createElement("img");
-//     image.setAttribute("src", `newsObject.imageUrl`);
-//     image.setAttribute("alt", `newsObject.imageAlt`);
-//     article.append(image);
-
-//     let div = document.createElement("div");
-//     div.classList.add("news-text");
-
-// }

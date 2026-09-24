@@ -143,12 +143,6 @@ header a:hover {
     margin: 0 1rem;
 }
 
-/* #number {
-    display: grid;
-    grid-template-rows: ;
-    justify-content: space-around;
-} */
-
 #upper-header-navbar {
     display: flex;
     /* border: 1px solid red; */
@@ -182,11 +176,11 @@ header a:hover {
 }
 
 #authentication-links li:first-child {
-    border: 1px solid rgb(125 46 255);
+    /* border: 1px solid rgb(125 46 255); */
 }
 
 #authentication-links li:first-child a {
-    color: rgb(125 46 255);
+    /* color: rgb(125 46 255); */
 }
 
 #notification-message {
@@ -448,9 +442,9 @@ footer > p {
 }
 
 .form-main-content {
-    width: 360px;
-    margin-top: 20px;
-    padding: 20px 40px;
+    width: 500px;
+    margin: 10px 0px 30px 0px;
+    padding: 10px 40px;
     background-color: white;
     border: 1px solid rgba(211, 213, 215, 0.929);
     border-radius: 20px;

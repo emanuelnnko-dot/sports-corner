@@ -64,8 +64,7 @@ if (loginEmailValue !== "" && loginPasswordValue !== "") {
                 failLoginMessage.style.display = "block";
                 throw new Error( result || "Failed to create account");
             } else {
-                console.log(result.message);
-                console.log(result.data);
+                console.log(result);
                 const notificationMessage = document.getElementById("notification-message");
                 let message = `<h2>You have successful logged in</h2>
                 <p>You will be redirected to home page</p> `;
@@ -77,7 +76,7 @@ if (loginEmailValue !== "" && loginPasswordValue !== "") {
             }
 
         } catch (error) {
-            console.error("Error occured:", error.message);
+            console.error("Error occured:", error);
         }
     }
     loginVerification(loginData);
