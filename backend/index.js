@@ -127,8 +127,12 @@ app.get("/api/news/:id", (req, res) => {
 });
 
 
-const admin = [];
-app.post("/api/admin", (req, res) => {
+// Handle admin registration
+const admins = [
+    {id: 477, employeeId: 1234, email: "emanuelnnko@gmail.com", firstName: "Emanuel", lastName: "Nnko", password: 123}
+];
+// const admins = [];
+app.post("/api/admins", (req, res) => {
     const UUID = crypto.randomUUID();
     const newAdmin = {
         id: UUID,
@@ -138,9 +142,9 @@ app.post("/api/admin", (req, res) => {
         lastName: req.body.lastName,
         password: req.body.password
     }
-    let prevArrayLength = admin.length;
-    admin.push(newAdmin);
-    let newArrayLength = admin.length;
+    let prevArrayLength = admins.length;
+    admins.push(newAdmin);
+    let newArrayLength = admins.length;
 
     if (newArrayLength > prevArrayLength) {
         res.status(201).json({
@@ -152,6 +156,30 @@ app.post("/api/admin", (req, res) => {
     }
 });
 
+// Handle admin login verification
+app.post("/api/admins/login", (req, res) => {
+
+    console.log(req.body);
+    let foundAdmin = admins.find(admin => admin.email === req.body.loginEmail && admin.password === req.body.loginPassword);
+
+    if(!foundAdmin) {
+        // status code: 404 - No matching
+        return res.status(404).json(`Fail to log in`);
+    } else {
+        // status code: 200 OK - response is successful 
+        res.status(200).json(foundAdmin);
+        // console.log(`Matched:, foundAdmin`);
+    }
+
+});
+
+const body = {
+        loginEmail: "emanuelnnko@gmail.com",
+        loginPassword: 123,
+    }
+
+let foundAdmin = admins.find(admin => admin.email === body.loginEmail && admin.password === body.loginPassword);
+console.log(foundAdmin);
 
 app.listen(PORT, () => {
     console.log(`Server is running locally at http://localhost:${PORT}`); 

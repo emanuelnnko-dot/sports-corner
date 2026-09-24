@@ -25,8 +25,11 @@
                 <form action="login.html" method="post">
                     <label for="login-email">Email</label> <br>
                     <input type="text" id="login-email" name="login-email" title="Please fill out this field." required> <br>
+                    <p id="login-email-correction" class="input-correction-message"></p>
+                    
                     <label for="login-password">Password</label> <br>
                     <input type="password" id="login-password" name="login-password" title="Please fill out this field." required> <br>
+                    <p id="login-password-correction" class="input-correction-message"></p>
                     <div class="login-form-middle-part">
                         <div>
                             <input type="checkbox" id="stay-signed" name="stay-signed" value="true" >                    
@@ -46,6 +49,6 @@
 
     </section>
 
-    <script src="authentication.js"></script>
+    <script src="login.js"></script>
 </body>
 </html>

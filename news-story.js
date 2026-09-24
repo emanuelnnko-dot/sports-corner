@@ -44,9 +44,9 @@ function displaySingleNews(newsContainer, result) {
     mainSectionSingleNews.innerHTML = "";
     const newsElement = `
     <article class="news-item">
+    <h3>${result.title}</h3>
     <img src="${result.imageUrl}" alt="${result.imageAlt}">
     <div class="news-text">
-        <h3>${result.title}</h3>
         <p><span>${result.category}:</span><span>${result.location}.</span><span> ${result.date}</span></p>
         <p>
             ${result.newsStory}
