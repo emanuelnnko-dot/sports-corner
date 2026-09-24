@@ -128,10 +128,10 @@ app.get("/api/news/:id", (req, res) => {
 
 
 // Handle admin registration
-const admins = [
-    {id: 477, employeeId: 1234, email: "emanuelnnko@gmail.com", firstName: "Emanuel", lastName: "Nnko", password: 123}
-];
-// const admins = [];
+// const admins = [
+//     {id: 477, employeeId: 1234, email: "emanuelnnko@gmail.com", firstName: "Emanuel", lastName: "Nnko", password: 123}
+// ];
+const admins = [];
 app.post("/api/admins", (req, res) => {
     const UUID = crypto.randomUUID();
     const newAdmin = {
@@ -173,13 +173,13 @@ app.post("/api/admins/login", (req, res) => {
 
 });
 
-const body = {
-        loginEmail: "emanuelnnko@gmail.com",
-        loginPassword: 123,
-    }
+// const body = {
+//         loginEmail: "emanuelnnko@gmail.com",
+//         loginPassword: 123,
+//     }
 
-let foundAdmin = admins.find(admin => admin.email === body.loginEmail && admin.password === body.loginPassword);
-console.log(foundAdmin);
+// let foundAdmin = admins.find(admin => admin.email === body.loginEmail && admin.password === body.loginPassword);
+// console.log(foundAdmin);
 
 app.listen(PORT, () => {
     console.log(`Server is running locally at http://localhost:${PORT}`); 

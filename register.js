@@ -1,5 +1,3 @@
-// alert("register.js");
-
 // Handle registration
 const idNumberCorrection = document.getElementById("id-number-correction");
 const registerEmailCorrection = document.getElementById("register-email-correction");

@@ -1,4 +1,3 @@
-// alert("Yes!");
 const mainSection = document.getElementById("main");
 console.log(mainSection);
 const API_URL = "http://localhost:5000/api/news";
@@ -15,12 +14,6 @@ async function fetchAllNews() {
 
             let newsCategoryCollections = "";
             console.log(newsCategoryCollections);
-            // // newsCategoryCollections = createNewsCategoryCollection(result, "football", newsCategoryCollections);
-            // newsCategoryCollections = createNewsCategoryCollection(result, "boxing", newsCategoryCollections);
-            // newsCategoryCollections = createNewsCategoryCollection(result, "basketball", newsCategoryCollections);
-            // console.log(newsCategoryCollections);
-            // mainSection.innerHTML = "";
-            // mainSection.innerHTML = newsCategoryCollections;
 
             renderNewsCategoryCollections(result, newsCategoryCollections);
 
@@ -33,20 +26,6 @@ async function fetchAllNews() {
 
 fetchAllNews();
 
-// const newsObject = {
-//     id: 1,
-//     category: "Football",
-//     title: "Gabriel Martinelli Set for Saudi Switch As Pressure Mounts for Attacking Reinforcements",
-//     titleLink: "news-story.html?id=1",
-//     date: "25 Aug 2026",
-//     location: "London, UK",
-//     imageUrl: "images/football/gabriel-martineli.png",
-//     imageAlt: "Gabriel Martineli",
-//     newsIntro: "Mikel Arteta is set to facilitate a record-breaking departure as the Brazilian winger nears a blockbuster move to Al Hilal, ending a seven-year spell in North London.",
-//     newsStory: ""
-// }
-
-
 function createNewsCategoryCollection(allNews, categoryName, newsCategoryCollections) {
     let filteredCategoryNews = allNews.filter(news => news.category.toLowerCase() === categoryName);
     if (filteredCategoryNews[0]) {
@@ -57,9 +36,6 @@ function createNewsCategoryCollection(allNews, categoryName, newsCategoryCollect
                     <div class="heading">
                         <div>
                             <h2>${filteredCategoryNews[0].category}</h2>
-                        </div>
-                        <div>
-                            <p class="read-more">Read more </p>
                         </div>
                     </div>`;
         for (i = 0; i < 4; i++) {
@@ -100,10 +76,3 @@ function renderNewsCategoryCollections(allNews, newsCategoryCollections) {
     mainSection.innerHTML = newsCategoryCollections;
     // console.log(newsCategoryCollections);
 }
-
-
-
-// Try to use: window.addEventListener(){};
-// let moreNewsInCategory = document.querySelectorAll('.read-more');
-// moreNewsInCategory.style.color = "blue";
-
