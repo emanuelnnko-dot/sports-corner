@@ -17,7 +17,7 @@ To create the website that will include the features that will meet their needs.
 -  Sports news from different categories like football, basketball, boxing, tennis, golf etc.
 -  The news contents come for the backend Node.js API server.
 -  Users can create an account by filling the registration form.
--  Users can also login into their acconts.
+-  Users can also login into their accounts.
 
 ## Future improvements
 -  Continue with the improvement of the design of the web page with interactivity features by using JavaScript.
